@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI calculator</h1>
+      <input type="text" name="gewicht" id="gewicht" placeholder="Gewicht in kg"></input>
+      <input type="text" name="lengte" id="lengte" placeholder="lengte in cm"></input>
+      <input type="button" name="button" onclick="combine()" value="Berekenen"></input>
+
+      <div class="uitvoer">
+        <p>Het resultaat <span id="resultaat"></p>
+        </div>
+
+      <script src="ajax.js"></script>
+      <script>
+        function combine() {
+          let gewicht = document.getElementById('gewicht').value;
+          let lengte = document.getElementById('lengte').value;
+          ajax(gewicht, lengte);
+        }
+      </script>
+    </div>
+  </body>
+</html>
